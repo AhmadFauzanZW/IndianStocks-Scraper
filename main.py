@@ -1,7 +1,6 @@
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
-from pandas.core.interchange.dataframe_protocol import DataFrame
 
 url = "https://ticker.finology.in/"
 HEADERS = {
@@ -41,4 +40,4 @@ for i in rows[1:]:
 
 print(df)
 
-df.to_csv("India Stock Market.csv")
+df.to_csv("India Stock Market.csv", index = False)
